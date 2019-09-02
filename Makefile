@@ -293,8 +293,8 @@ ifeq ($(DEBUG), 1)
   CXXFLAGS += -Wconversion
 else
 	# Fail on warnings
-  CFLAGS += -Os -g3 -Werror
-  CXXFLAGS += -Os -g3 -Werror
+  CFLAGS += -Os -g3 # -Werror
+  CXXFLAGS += -Os -g3 # -Werror
 endif
 
 ifeq ($(LTO), 1)
@@ -309,7 +309,7 @@ CFLAGS += $(PROCESSOR) $(INCLUDES)
 CXXFLAGS += $(PROCESSOR) $(INCLUDES)
 
 CFLAGS += -Wall -Wmissing-braces -fno-strict-aliasing $(C_PROFILE) -std=gnu11
-CXXFLAGS += -Wall -Wmissing-braces -fno-strict-aliasing
+CXXFLAGS += -Wall -Wmissing-braces -fno-strict-aliasing -std=c++98
 # Compiler flags to generate dependency files:
 CFLAGS += -MD -MP -MF $(BIN)/dep/$(@).d -MQ $(@)
 CXXFLAGS += -MD -MP -MF $(BIN)/dep/$(@).d -MQ $(@)
