@@ -1,5 +1,7 @@
 # Crazyflie 2.0 Firmware  [![Build Status](https://api.travis-ci.org/bitcraze/crazyflie-firmware.svg)](https://travis-ci.org/bitcraze/crazyflie-firmware)
 
+test v2
+
 This project contains the source code for the Crazyflie 2.0 firmware with modification allowing SITL and HITL simulation.
 
 ## Modifications for SITL and HITL
